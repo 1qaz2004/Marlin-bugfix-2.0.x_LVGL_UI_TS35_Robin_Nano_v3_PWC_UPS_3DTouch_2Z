@@ -629,9 +629,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp  26.22
-    #define DEFAULT_Ki   2.45
-    #define DEFAULT_Kd  70.27
+    #define DEFAULT_Kp  29.13
+    #define DEFAULT_Ki   2.41
+    #define DEFAULT_Kd  87.98
   #endif
 #endif
 
@@ -708,9 +708,9 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 33.38
-  #define DEFAULT_bedKi 1.75
-  #define DEFAULT_bedKd 423.71
+  #define DEFAULT_bedKp 26.82
+  #define DEFAULT_bedKi 1.44
+  #define DEFAULT_bedKd 333.29
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -1391,10 +1391,10 @@
  * These options are most useful for the BLTouch probe, but may also improve
  * readings with inductive probes and piezo sensors.
  */
-//#define PROBING_HEATERS_OFF       // Turn heaters off when probing
+#define PROBING_HEATERS_OFF         // Turn heaters off when probing
 #if ENABLED(PROBING_HEATERS_OFF)
-  //#define WAIT_FOR_BED_HEATER     // Wait for bed to heat back up between probes (to improve accuracy)
-  //#define WAIT_FOR_HOTEND         // Wait for hotend to heat back up between probes (to improve accuracy & prevent cold extrude)
+  #define WAIT_FOR_BED_HEATER       // Wait for bed to heat back up between probes (to improve accuracy)
+  #define WAIT_FOR_HOTEND           // Wait for hotend to heat back up between probes (to improve accuracy & prevent cold extrude)
 #endif
 //#define PROBING_FANS_OFF          // Turn fans off when probing
 //#define PROBING_ESTEPPERS_OFF     // Turn all extruder steppers off when probing
